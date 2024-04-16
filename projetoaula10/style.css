@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+}
+
+nav{
+    border: 10px greenyellow solid;
+    margin: 25px;
+    padding: 10px;
+}
+
+a:visited{
+    color:aqua;
+}
+
+section{
+    border: 2px black dashed;
+    margin: 30px;
+    padding: 11px;
+}
+
+footer{
+        border: 5px blue dashed;
+        margin: 27px;
+        padding: 9px;
+}
+ 
+body{
+    background-color: teal;
+}
+
+.produtos img{
+    border: 5px goldenrod;
+    width: 100%;
+
+}
+
+.produtos{
+    width: 25%;
+}
+
+.produtos:hover{
+    background-color: aliceblue;
+}
