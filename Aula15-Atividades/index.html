@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Média</title>
+<script>
+  // Função para calcular a média das notas
+  function calcularMedia() {
+    // Declaração de variáveis para armazenar as notas
+    let nota1 = parseFloat(document.getElementById('nota1').value);
+    let nota2 = parseFloat(document.getElementById('nota2').value);
+    let nota3 = parseFloat(document.getElementById('nota3').value);
+
+    // Realize a operação de cálculo da média
+    let media = (nota1 + nota2 + nota3) / 3;
+
+    // Use console.log para exibir a média no console
+    console.log("A média é: " + media.toFixed(2));
+
+    // Use window.alert para exibir a média em um alerta
+    window.alert("A média é: " + media.toFixed(2));
+
+    // Atualize o conteúdo de um elemento HTML com document.getElementById para mostrar a média na página
+    document.getElementById('resultado').textContent = "A média é: " + media.toFixed(2);
+  }
+</script>
+</head>
+<body>
+<h1>Calculadora de Média</h1>
+<!-- Três campos de entrada para as notas -->
+<input type="number" id="nota1" placeholder="Mas quem">
+<input type="number" id="nota2" placeholder="sou eu">
+<input type="number" id="nota3" placeholder="pra julgar a sua nota, né?">
+<button onclick="calcularMedia()">Hora da verdade 🙄</button>
+<!-- Elemento para exibir o resultado -->
+<p id="resultado"></p>
+</body>
+</html>
