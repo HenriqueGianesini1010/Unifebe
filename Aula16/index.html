@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="clickbutton()">Botão 1</button>
+    <button id="botão">Botão 2</button>
+    <button andblclick="clickbotao()">Botão 3</button>
+    <button onkeypress="clickbotao()">Botão 4</button>
+    <button onmousemove="clickbotao()">Botão 5</button>
+    <button onmouseout="clickbotao">Botão 6</button> -->
+
+    <input id="idade" type="text" required>
+    <button onclick="verificaMaioridade()">Verifica Maioridade</button>
+    <script>
+         function verificaMaioridade() {
+            let idade = parseFloat(document.getElementById('idade').value);
+
+            if (idade >= 18) {
+            alert('Maior de idade, Hora de Trabalhar, Flor. 🙄');
+            }
+
+            else {
+            alert('Menor de idade, que pena, mas quem sou eu pra julgar, né?.🙄');
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
