@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Jogo de Pontuação</title>
+<script>
+// Inicializa as pontuações
+let pontuacaoDupla1 = 0;
+let pontuacaoDupla2 = 0;
+
+function adicionarPontos(dupla, pontos) {
+  if (dupla === 1) {
+    pontuacaoDupla1 += pontos;
+  } else if (dupla === 2) {
+    pontuacaoDupla2 += pontos;
+  }
+
+  // Atualiza as pontuações no HTML
+  document.getElementById('pontuacaoDupla1').textContent = pontuacaoDupla1;
+  document.getElementById('pontuacaoDupla2').textContent = pontuacaoDupla2;
+
+  // Verifica se alguma dupla venceu
+  if (pontuacaoDupla1 >= 12) {
+    document.getElementById('resultado').textContent = 'Dupla 1 venceu!';
+  } else if (pontuacaoDupla2 >= 12) {
+    document.getElementById('resultado').textContent = 'Dupla 2 venceu!';
+  }
+}
+</script>
+</head>
+<body>
+
+<h2>Dupla 1: <span id="pontuacaoDupla1">0</span></h2>
+<h2>Dupla 2: <span id="pontuacaoDupla2">0</span></h2>
+
+<!-- Botões para a Dupla 1 -->
+<button onclick="adicionarPontos(1, 1)">+1 Dupla 1</button>
+<button onclick="adicionarPontos(1, 3)">+3 Dupla 1</button>
+<button onclick="adicionarPontos(1, 6)">+6 Dupla 1</button>
+<button onclick="adicionarPontos(1, 9)">+9 Dupla 1</button>
+<button onclick="adicionarPontos(1, 12)">+12 Dupla 1</button>
+
+<!-- Botões para a Dupla 2 -->
+<button onclick="adicionarPontos(2, 1)">+1 Dupla 2</button>
+<button onclick="adicionarPontos(2, 3)">+3 Dupla 2</button>
+<button onclick="adicionarPontos(2, 6)">+6 Dupla 2</button>
+<button onclick="adicionarPontos(2, 9)">+9 Dupla 2</button>
+<button onclick="adicionarPontos(2, 12)">+12 Dupla 2</button>
+
+<p id="resultado"></p>
+
+</body>
+</html>
