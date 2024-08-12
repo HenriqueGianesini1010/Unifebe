@@ -1,0 +1,42 @@
+public class Primeiro 
+     {public static void main(String[] args) 
+	  {int x,y,z,w,k,aux,fatorial,ehPrimo;
+	   x = 25;
+	   y = 3;
+	   z = x * y + 5;
+	   k = z / y + 1;
+	   w = x % y;
+	   System.out.println("\nX CONTEM " + x);
+	   System.out.println("Y CONTEM "+y);
+	   System.out.println("Z CONTEM "+z);
+	   System.out.println("K VALE "+k);
+	   System.out.println("W VALE "+w);
+	   if ((k % 2) == 0)
+	      {System.out.println("k EH PAR");
+	      }
+	   else
+	      {System.out.println("k EH IMPAR");
+	      }
+	   fatorial = 1;
+	   aux = y;
+	   while (aux > 1)
+	    	{fatorial = fatorial * aux;
+		 aux = aux - 1;
+	        }
+	   System.out.println("FATORIAL DE "+ y + " = " + fatorial);	
+	   ehPrimo = 1;
+	   aux = x - 1;
+	   while (aux > 1)
+	      {if ((x % aux ) == 0)
+	          {ehPrimo = 0;
+	          }
+	       aux = aux - 1;
+	      }
+	   if (ehPrimo == 1)
+	      {System.out.println("X EH PRIMO");
+	      }
+	   else
+	      {System.out.println("X NAO EH PRIMO");
+	      }
+  	  }
+  }
