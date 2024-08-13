@@ -1,0 +1,27 @@
+Henrique Gianesini- Turma SI02B
+
+public class Primeiro {
+
+	public static void main(String[] args) {
+	   int outra, aux;
+	   boolean primo;
+	outra= 7;
+	primo = true;
+	   aux = outra - 1;
+	   
+	   
+	   
+	   while (aux >1) {
+		   if ((outra%aux)== 0 ) {
+			   primo = false;
+		   }
+		   aux--;
+	   }
+	   if (primo==true) {
+		   System.out.println(outra + " E numero primo");
+	   }
+	   else {
+		   System.out.println(outra + " Nao e numero primo");
+	   }
+}
+}
