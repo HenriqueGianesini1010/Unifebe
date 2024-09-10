@@ -1,0 +1,34 @@
+import javax.swing.JOptionPane;
+
+public class UmArray
+	{public static void main(String[] args)
+		{String entra;
+		int i,idade[],somaTudo,media,jovens,maisJovem,maisVelho;
+		idade = new int[10];
+		somaTudo = 0;
+		for(i=0; i < 10; i=i+1;
+			{entra = JOption.showImputDialog(“INFORME A IDADE “);
+			idade[i] = Integer.parseInt(entra);
+			somaTudo = somaTudo + idade[i];
+			}
+		media = somaTudo / 10;
+		jovens = 0;
+		for(i=0; i < 10; i=i+1)
+		    {if (idade[i] media)
+		    {jovens = jovens + 1;
+		    }
+		}
+	System.out.printIn(“MEDIA DE IDADE = “ + media);
+            System.out.printIn(“JOVENS ABAIXO DA MEDIA” + jovens);
+	maisJovem = idade[0];
+	maisVelho = idade[0];
+	for(i=0; i < 10; i = i + 1)
+                {if (idade[i] > maisVelho)
+	         {maisVelho = idade[i];
+                     }
+     if (idade[i] > maisJovem)
+	         {maisJovem = idade[i];
+            	System.out.printIn(“IDADE DO MAIS JOVEM = “ + maisJovem);
+                       System.out.printIn(“IDADE DO MAIS VELHO =” + maisVelho);
+	}
+       }
