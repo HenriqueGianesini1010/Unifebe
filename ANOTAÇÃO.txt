@@ -1,0 +1,80 @@
+ANOTAÇÃO: 
+
+INICIO
+	MULT <- 0;
+	MULT3PAR <- 0;
+	MAIOR <- -1;
+        FOR
+	INICIO 
+	  LEIA (NUMERO);
+	  SE ((NUMERO % 3) == O) ENTAO
+	          INICIO
+       MULT3 <- MULT3 + 1;
+       SE ((NUMERO % 2)== 0) ENTAO
+           INICIO 
+               MULT3PAR <- MULT3PAR + 1;
+           FIM
+         FIM
+SE (NUMERO > MAIOR)
+         INICIO
+              MAIOR <- NUMERO;
+         FIM
+             FIM
+        FATORIAL <- 1;
+         FOR (AUX = MAIOR; AUX > 1;  AUX = AUX-1)
+             INICIO 
+                  FATORIAL <- FATORIAL * AUX;
+             FIM
+        ESCREVA (“MULTIPLOS DE 3 = ” + MULT);
+        ESCREVA (“MULTIPLOS DE 3 PAR3 = “ + MULT3PAR);
+        ESCREVA (“FATORIAL DO MAIOR = ” + FATORIAL);
+FIM
+
+JAVA:
+
+package PortugolParaJava;
+
+import javax.swing.JOptionPane;
+
+public class PortugolParaJava {
+    public static void main(String[] args) {
+        String entrada;
+        int mult = 0;
+        int mult3par = 0;
+        int maior = -1;
+        int laco = 0;
+        int numero ;
+
+        while (laco<10) {
+           
+       entrada = JOptionPane.showInputDialog("Informe um numero");
+       numero = Integer.parseInt(entrada);
+
+
+
+            if (numero % 3 == 0) {
+                mult++;
+                if (numero % 2 == 0) {
+                    mult3par++;
+                }
+            }
+
+            if (numero > maior) {
+                maior = numero;
+            }
+            laco++;
+        }
+
+        int fatorial = 1;
+        for (int aux = maior; aux > 1; aux--) {
+            fatorial *= aux;
+        }
+
+        System.out.println("Múltiplos de 3 = " + mult);
+        System.out.println("Múltiplos de 3 pares = " + mult3par);
+        System.out.println("Fatorial do maior = " + fatorial);
+    }
+}
+
+
+
