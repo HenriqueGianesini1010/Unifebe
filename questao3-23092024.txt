@@ -1,0 +1,62 @@
+3) Uma empresa de ônibus pretende fazer uma avaliação da ocupação de seus ônibus. Cinco deles foram avaliados e para cada um anotou-se: 
+a) O número do ônibus; 
+b) O número inicial da catraca (antes de começar a viagem; 
+c) O número final da catraca. 
+
+Faça um programa que leia estas informações e diga: 
+a) Quantas pessoas são transportadas em média pela empresa a cada viagem; 
+b) Qual o número do ônibus que andou mais lotado e quantas pessoas transportou; 
+c) Para aquelas viagens realizadas com lotação superior a média, mostre o número do ônibus e a quantidade de pessoas transportadas.
+
+RESPOSTA:
+
+package Exercicio;
+import java.util.Scanner;
+public class Exercicio {
+   public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+      
+       int[] numeroOnibus = new int[5];
+       int[] inicialCatraca = new int[5];
+       int[] finalCatraca = new int[5];
+       int[] pessoasTransportadas = new int[5];
+       int totalPessoas = 0;
+      
+       // Leitura dos dados
+       for (int i = 0; i < 5; i++) {
+           System.out.println("Digite o número do ônibus " + (i + 1) + ":");
+           numeroOnibus[i] = scanner.nextInt();
+           System.out.println("Digite o número inicial da catraca do ônibus " + (i + 1) + ":");
+           inicialCatraca[i] = scanner.nextInt();
+           System.out.println("Digite o número final da catraca do ônibus " + (i + 1) + ":");
+           finalCatraca[i] = scanner.nextInt();
+           pessoasTransportadas[i] = finalCatraca[i] - inicialCatraca[i];
+           totalPessoas += pessoasTransportadas[i];
+       }
+      
+       // Cálculo da média de pessoas transportadas
+       double mediaPessoas = totalPessoas / 5.0;
+       System.out.println("Média de pessoas transportadas por viagem: " + mediaPessoas);
+      
+       // Identificação do ônibus mais lotado
+       int maxPessoas = pessoasTransportadas[0];
+       int onibusMaisLotado = numeroOnibus[0];
+       for (int i = 1; i < 5; i++) {
+           if (pessoasTransportadas[i] > maxPessoas) {
+               maxPessoas = pessoasTransportadas[i];
+               onibusMaisLotado = numeroOnibus[i];
+           }
+       }
+       System.out.println("Ônibus mais lotado: " + onibusMaisLotado + " com " + maxPessoas + " pessoas.");
+      
+       // Exibição dos ônibus com lotação superior à média
+       System.out.println("Ônibus com lotação superior à média:");
+       for (int i = 0; i < 5; i++) {
+           if (pessoasTransportadas[i] > mediaPessoas) {
+               System.out.println("Ônibus " + numeroOnibus[i] + " transportou " + pessoasTransportadas[i] + " pessoas.");
+           }
+       }
+      
+       scanner.close();
+   }
+}
