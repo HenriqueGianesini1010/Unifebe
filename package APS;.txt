@@ -1,0 +1,60 @@
+package APS;
+
+import java.util.Scanner;
+
+public class APSFundamentosDaProgramação {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int[] numeros = new int[10];
+        double[] comprimentos = new double[10];
+        double[] larguras = new double[10];
+        double[] areas = new double[10];
+        
+        // Leitura dos dados
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Digite o número da sala " + (i + 1) + ":");
+            numeros[i] = scanner.nextInt();
+            System.out.println("Digite o comprimento da sala " + (i + 1) + ":");
+            comprimentos[i] = scanner.nextDouble();
+            System.out.println("Digite a largura da sala " + (i + 1) + ":");
+            larguras[i] = scanner.nextDouble();
+            areas[i] = comprimentos[i] * larguras[i];
+        }
+        
+        // Cálculo da área média
+        double somaAreas = 0;
+        for (double area : areas) {
+            somaAreas += area;
+        }
+        double areaMedia = somaAreas / 10;
+        System.out.println("Área média das salas: " + areaMedia);
+        
+        // Encontrar a menor e a maior sala
+        int indiceMenor = 0, indiceMaior = 0;
+        for (int i = 1; i < 10; i++) {
+            if (areas[i] < areas[indiceMenor]) {
+                indiceMenor = i;
+            }
+            if (areas[i] > areas[indiceMaior]) {
+                indiceMaior = i;
+            }
+        }
+        System.out.println("Menor sala: Número " + numeros[indiceMenor] + ", Área: " + areas[indiceMenor]);
+        System.out.println("Maior sala: Número " + numeros[indiceMaior] + ", Área: " + areas[indiceMaior]);
+        
+        // Contar salas maiores e menores que a média
+        int countMaiores = 0, countMenores = 0;
+        for (double area : areas) {
+            if (area > areaMedia) {
+                countMaiores++;
+            } else if (area < areaMedia) {
+                countMenores++;
+            }
+        }
+        System.out.println("Número de salas maiores que a média: " + countMaiores);
+        System.out.println("Número de salas menores que a média: " + countMenores);
+        
+        scanner.close();
+    }
+}
