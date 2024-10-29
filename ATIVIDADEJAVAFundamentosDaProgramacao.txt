@@ -1,0 +1,90 @@
+package ATIVIDADEJAVA;
+
+import javax.swing.JOptionPane;
+
+public class ATIVIDADEJAVA {
+    public static void main(String[] args) {
+        int lado1, lado2, result, opcao;
+        String entra;
+
+        do {
+            entra = JOptionPane.showInputDialog(
+                "SISTEMA FIGURAS GEOMÉTRICAS" +
+                "\n\n\t1. AREA QUADRADO" +
+                "\n\t2. AREA RETANGULO" +
+                "\n\t3. PERIMETRO QUADRADO" +
+                "\n\t4. PERIMETRO RETANGULO" +
+                "\n\t5. AREA TRIÂNGULO RETÂNGULO" +
+                "\n\t6. PERIMETRO TRIÂNGULO RETÂNGULO" +
+                "\n\t9. VAZAR" +
+                "\n\n\tQUAL A OPERACAO VOCE QUER APRENDER "
+            );
+            opcao = Integer.parseInt(entra);
+
+            switch (opcao) {
+                case 1:
+                    entra = JOptionPane.showInputDialog("INFORME O LADO DO QUADRADO");
+                    lado1 = Integer.parseInt(entra);
+                    result = lado1 * lado1;
+                    System.out.println("AREA DO QUADRADO = " + result);
+                    break;
+
+                case 2:
+                    entra = JOptionPane.showInputDialog("INFORME O LADO MENOR DO RETANGULO");
+                    lado1 = Integer.parseInt(entra);
+                    do {
+                        entra = JOptionPane.showInputDialog("INFORME O LADO MAIOR DO RETANGULO");
+                        lado2 = Integer.parseInt(entra);
+                    } while (lado2 <= lado1);
+                    result = lado1 * lado2;
+                    System.out.println("AREA DO RETANGULO = " + result);
+                    break;
+
+                case 3:
+                    entra = JOptionPane.showInputDialog("INFORME O LADO DO QUADRADO");
+                    lado1 = Integer.parseInt(entra);
+                    result = lado1 * 4;
+                    System.out.println("PERIMETRO DO QUADRADO = " + result);
+                    break;
+
+                case 4:
+                    entra = JOptionPane.showInputDialog("INFORME O LADO MENOR DO RETANGULO");
+                    lado1 = Integer.parseInt(entra);
+                    do {
+                        entra = JOptionPane.showInputDialog("INFORME O LADO MAIOR DO RETANGULO");
+                        lado2 = Integer.parseInt(entra);
+                    } while (lado2 <= lado1);
+                    result = (lado1 * 2) + (lado2 * 2);
+                    System.out.println("PERIMETRO DO RETANGULO = " + result);
+                    break;
+
+                case 5:
+                    entra = JOptionPane.showInputDialog("INFORME O CATETO OPOSTO DO TRIÂNGULO RETÂNGULO");
+                    lado1 = Integer.parseInt(entra);
+                    entra = JOptionPane.showInputDialog("INFORME O CATETO ADJACENTE DO TRIÂNGULO RETÂNGULO");
+                    lado2 = Integer.parseInt(entra);
+                    result = (lado1 * lado2) / 2;
+                    System.out.println("AREA DO TRIÂNGULO RETÂNGULO = " + result);
+                    break;
+
+                case 6:
+                    entra = JOptionPane.showInputDialog("INFORME O CATETO OPOSTO DO TRIÂNGULO RETÂNGULO");
+                    lado1 = Integer.parseInt(entra);
+                    entra = JOptionPane.showInputDialog("INFORME O CATETO ADJACENTE DO TRIÂNGULO RETÂNGULO");
+                    lado2 = Integer.parseInt(entra);
+                    int hipotenusa = (int) Math.sqrt(lado1 * lado1 + lado2 * lado2);
+                    result = lado1 + lado2 + hipotenusa;
+                    System.out.println("PERIMETRO DO TRIÂNGULO RETÂNGULO = " + result);
+                    break;
+
+                case 9:
+                    System.out.println("OBRIGADO POR USAR O SISMIM - SISTEMA FEITO POR MIM  :-)");
+                    break;
+
+                default:
+                    System.out.println("OPCAO INVALIDA! TENTE NOVAMENTE.");
+                    break;
+            }
+        } while (opcao != 9);
+    }
+}
