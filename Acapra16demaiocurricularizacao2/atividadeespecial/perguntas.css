@@ -1,0 +1,109 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+header .logo img {
+  height: 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #3a3a8f;
+  font-weight: bold;
+}
+
+/* Conteúdo */
+main {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+main h1 {
+  color: #3a3a8f;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+/* FAQ estilo accordion */
+.faq details {
+  background: #f6f6fb;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 18px 20px;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+}
+
+.faq summary {
+  list-style: none;
+  font-weight: bold;
+  color: #333;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.faq summary::after {
+  content: "⌄";
+  font-size: 18px;
+  color: #555;
+  transition: transform 0.3s;
+}
+
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.faq p {
+  margin-top: 12px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Rodapé */
+footer {
+  background: #3a3a8f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+}
+
+.footer-content img {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.footer-content p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.footer-icons img {
+  height: 22px;
+  margin-left: 15px;
+  cursor: pointer;
+}

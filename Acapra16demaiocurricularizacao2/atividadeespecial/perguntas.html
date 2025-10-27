@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>ACAPRA - Contato</title>
+            <link rel="stylesheet" href="styles4.css">
+       
+        <title>Perguntas Frequentes</title>
+        <style>
+        </style>
+        </head>
+        <body>
+            <header>
+                <div class="logo">
+                    <img src="logo roxa 1.png" alt="ACAPRA Logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Quem Somos</a></li>
+                        <li><a href="doacoes.html">Quero Contribuir</a></li>
+                        <li><a href="historia.html">Histórias de Sucesso</a></li>
+                        <li><a href="petsdisponiveis.html">Pets Disponíveis</a></li>
+                        <li><a href="noticias.html">Últimas Notícias</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </header>
+          <h1>Perguntas Frequentes</h1>
+       
+          <div class="faq-section">
+            <div class="faq-question">Posso doar mesmo que seja um valor pequeno?</div>
+            <div class="faq-answer">Sim! Toda contribuição, por menor que seja, faz a diferença e ajuda a melhorar a vida dos animais em nosso abrigo.  Agradecemos qualquer ajuda!</div>
+          </div>
+       
+          <div class="faq-section">
+            <div class="faq-question">O que fazer ao presenciar maus-tratos a animais?</div>
+            <div class="faq-answer">Ligue imediatamente para a polícia ou para uma organização de proteção animal.  Documente o ocorrido com fotos ou vídeos, se possível, e anote todos os detalhes, como data, hora e local.  Sua denúncia pode salvar uma vida!</div>
+          </div>
+       
+          <div class="faq-section">
+            <div class="faq-question">Como posso ajudar a ACAPRA?</div>
+            <div class="faq-answer">Existem várias maneiras de ajudar! Você pode doar, ser voluntário, divulgar nosso trabalho nas redes sociais, ou doar itens como ração e cobertores. Visite nossa página "Como ajudar" para mais informações.</div>
+          </div>
+       
+          <div class="faq-section">
+            <div class="faq-question">Quais são os requisitos para adotar um pet?</div>
+            <div class="faq-answer">Os requisitos variam, mas geralmente incluem uma entrevista para avaliar seu estilo de vida e capacidade de cuidar de um animal, uma visita ao abrigo para conhecer os pets disponíveis, e a assinatura de um termo de adoção.  Entre em contato para saber mais!</div>
+          </div>
+       
+          <div class="faq-section">
+            <div class="faq-question">A adoção é gratuita?</div>
+            <div class="faq-answer">Sim, a adoção em si é gratuita!  Pedimos apenas uma contribuição voluntária para ajudar a cobrir os custos de vacinação, vermifugação e castração.</div>
+          </div>
+
+
+
+
+          <script>
+  const questions = document.querySelectorAll(".faq-question");
+
+
+  questions.forEach((question) => {
+    question.addEventListener("click", () => {
+      const active = document.querySelector(".faq-section.active");
+      if (active && active !== question.parentElement) {
+        active.classList.remove("active");
+      }
+      question.parentElement.classList.toggle("active");
+    });
+  });
+</script>
+       
+        </body>
+    <footer>
+        <div class="footer-info">
+        <div class="footer-container">
+        <div class="footer-left">
+            <img src="Logo roxa 2.png" alt="ACAPRA logo" class="logo-footer">
+            <div class="footer-text">
+            <p>Associação Brusquense De Proteção Aos Animais - ACAPRA</p>
+            <p>Rua Exemplo, 123, Bairro Central, Brusque - SC, 12345-678</p>
+        </div>
+        </div>
+        <div class="social-media">
+            <a href="#"><img src="Vector (1).png" alt="WhatsApp"></a>
+            <a href="#"><img src="Pix.png" alt="Pix"></a>
+            <a href="#"><img src="Vector.png" alt="Email"></a>
+            <a href="#"><img src="🦆 icon _Instagram icon_.png" alt="Instagram"></a>
+        </div>
+    </footer>
+</body>
+</html>
